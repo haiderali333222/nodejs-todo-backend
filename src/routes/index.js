@@ -1,10 +1,9 @@
 import express from 'express';
+import todoRouter from './todo';
 
-const router = express.Router();
+const routes = express.Router();
 
 // Example route
-router.get('/', (req, res) => {
-  res.status(200).json({ message: 'Welcome to the API!' });
-});
+routes.use('/todos',todoRouter)
 
-export default router;
+export default routes;
