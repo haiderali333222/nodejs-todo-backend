@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node  src/Server.js",
+    "clean": "rimraf --glob dist/*",
+    "build": "yarn clean && babel src -d dist --copy-files",
+    "serve": "yarn build && node dist/Server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "nodemon": "^3.1.9",
+    "rimraf": "^6.0.1"
+  }
+}
